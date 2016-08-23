@@ -13,10 +13,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.Stack;
+
 
 public class MainActivity extends FragmentActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -87,7 +87,7 @@ public class MainActivity extends FragmentActivity
 
             alertDialog.setPositiveButton("はい", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    realOnBackPressed();
+                    MainActivity.super.onBackPressed();
                 }
             });
 
@@ -117,11 +117,6 @@ public class MainActivity extends FragmentActivity
         }
     }
 
-    private void realOnBackPressed() {
-        //本来の戻るボタン押下時の動作
-        super.onBackPressed();
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -142,7 +137,7 @@ public class MainActivity extends FragmentActivity
         } else if (id == R.id.nav_test2 && nowFragmentName != fragmentNameTest2) {
             nextFragmentName = fragmentNameTest2;
             fragment = test2Fragment;
-        } else if (id == R.id.nav_test2 && nowFragmentName != fragmentNameTest2) {
+        } else if (id == R.id.nav_test3 && nowFragmentName != fragmentNameTest3) {
             nextFragmentName = fragmentNameTest3;
             fragment = test3Fragment;
         }
