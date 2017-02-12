@@ -1,3 +1,3 @@
 # Android_NavigationDrawerWithFragments
-AndroidStudioテンプレートのナビゲーションドロワーとフラフメントを利用した画面遷移のサンプルです．
+AndroidStudioテンプレートのナビゲーションドロワーとフラフメントを利用した画面遷移のサンプルです．  
 テンプレートを少しいじってあります．
